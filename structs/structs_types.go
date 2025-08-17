@@ -24,6 +24,20 @@ func main() {
 	}
 	log.Println("The user",user," current age is ",findAge(user.BirthDate))
 	log.Println(s)
+
+	u :=User{
+		FirstName: "Aditya",
+		LastName:  "Chaudhary",
+	}
+
+	log.Println(u.getFirstName())
+
+	var myString = "Green"
+
+	log.Println("myString is set to",myString)
+	changeUsingPointer(&myString) // sending reference for the string value stored
+	log.Println("after function call the value changed to ",myString)
+
 }
 
 func findAge(bday time.Time) int {
